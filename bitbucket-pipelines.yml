@@ -1,0 +1,73 @@
+image: node:6.9.4
+
+pipelines:
+  custom:
+    Increase Version:
+      - step:
+          name: Increase Version
+          script:
+            - echo "Increase version number in $BITBUCKET_BRANCH branch"
+            - pushd ./src/Trimedx.Healthcare.Web.Common/Version_bitbucket
+            - chmod +x ./increase_version.sh
+            - ./increase_version.sh
+            - popd
+            - git add ./src/Trimedx.Healthcare.Web.Common/Version_bitbucket/Version.txt
+            - git add ./src/Trimedx.Healthcare.Web.Common/Properties/AssemblyVersion.cs
+            - git add ./src/Trimedx.Healthcare.DB/SPs.sql
+            - git add ./src/Trimedx.Healthcare.DB/Views.sql
+            - git add ./src/Trimedx.Healthcare.DB/OnceRun/CAMOnceRun.sql
+            - git add ./src/Trimedx.Healthcare.DB/sp_GetVersion.sql
+            - git add ./src/Trimedx.Healthcare.DB/CAMPortal/SPs.sql
+            - git add ./src/Trimedx.Healthcare.DB/CAMPortal/Views.sql
+            - git add ./src/Trimedx.Healthcare.DB/CAMPortal/OnceRun/CAMPortalOnceRun.sql
+            - git add ./src/Trimedx.Healthcare.DB/CAMPortal/sp_GetVersion.sql
+            - git remote add versrep https://$BBUser:$BBPassword@bitbucket.org/tmx-rsqa/rsqa
+            - git config --global user.email "commits-noreply@bitbucket.org"
+            - git config --global user.name "bitbucket-pipelines"
+            - git commit -m "Version `head -1 ./src/Trimedx.Healthcare.Web.Common/Version_bitbucket/git_version.txt`"
+            - git push versrep $BITBUCKET_BRANCH
+            - git remote remove versrep
+            - echo "Done"
+
+    Push Preview:
+      - step:
+          name: Push Preview
+          script:
+            - if [[ $BITBUCKET_BRANCH != Preview ]]; then echo "Wrong branch. Expected 'Preview' branch"; exit 1; fi
+            - git remote add sandboxrep git@ssh.dev.azure.com:v3/trimedxdevops/RSQAnalytics/RSQAnalytics
+            - git config --global user.email "commits-noreply@bitbucket.org"
+            - git config --global user.name "bitbucket-pipelines"
+            - git push sandboxrep Preview:feature/preview
+            - git remote remove sandboxrep
+
+    Push Sandbox:
+      - step:
+          name: Push Sandbox
+          script:
+            - if [[ $BITBUCKET_BRANCH != Sandbox ]]; then echo "Wrong branch. Expected 'Sandbox' branch"; exit 1; fi
+            - git remote add sandboxrep git@ssh.dev.azure.com:v3/trimedxdevops/RSQAnalytics/RSQAnalytics
+            - git config --global user.email "commits-noreply@bitbucket.org"
+            - git config --global user.name "bitbucket-pipelines"
+            - git push sandboxrep Sandbox:master
+            - git remote remove sandboxrep
+
+    Push Hotfix:
+      - step:
+          name: Push Hotfix
+          script:
+            - if [[ $BITBUCKET_BRANCH != feature/hotfix ]]; then echo "Wrong branch. Expected 'feature/hotfix' branch"; exit 1; fi
+            - git remote add sandboxrep git@ssh.dev.azure.com:v3/trimedxdevops/RSQAnalytics/RSQAnalytics
+            - git config --global user.email "commits-noreply@bitbucket.org"
+            - git config --global user.name "bitbucket-pipelines"
+            - git push sandboxrep feature/hotfix:hotfix
+            - git remote remove sandboxrep
+
+  branches:
+    ArtezioLateNovember:
+      - step:
+          script:
+            - git remote add arteziorep https://$ArtezioGitUser:$ArtezioGitPassword@dev.azure.com/asaperski0035/Trimedx/_git/Trimedx
+            - git config user.email "commits-noreply@bitbucket.org"
+            - git config user.name "bitbucket-pipelines"
+            - git push arteziorep HEAD
+            - git remote remove arteziorep

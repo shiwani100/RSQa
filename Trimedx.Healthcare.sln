@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trimedx.Healthcare.Model", "src\Trimedx.Healthcare.Model\Trimedx.Healthcare.Model.csproj", "{C115324F-C495-4698-ADA5-06BAC5BEB15E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trimedx.Healthcare.Data", "src\Trimedx.Healthcare.Data\Trimedx.Healthcare.Data.csproj", "{2AB47F27-CB3A-4E66-A1C2-455D9641DB10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trimedx.Healthcare.Service", "src\Trimedx.Healthcare.Service\Trimedx.Healthcare.Service.csproj", "{B8148CEC-182E-4B7E-9DAB-6A83F82E61F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trimedx.Healthcare.Web", "src\Trimedx.Healthcare.Web\Trimedx.Healthcare.Web.csproj", "{92883900-BE01-4E96-A5DD-4177BD4D7B7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{519A74A0-B64B-4695-B82D-4BDC19C83C62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trimedx.Healthcare.Tests", "tests\Trimedx.Healthcare.Tests\Trimedx.Healthcare.Tests.csproj", "{104D5998-C282-418F-87D4-89FE4ADF595C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trimedx.Healthcare.Web.Admin", "src\Trimedx.Healthcare.Web.Admin\Trimedx.Healthcare.Web.Admin.csproj", "{B583BA53-E42F-4F51-92A9-7C90C19D8AF0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trimedx.Healthcare.Web.Common", "src\Trimedx.Healthcare.Web.Common\Trimedx.Healthcare.Web.Common.csproj", "{68A50667-412C-4EFD-A781-6B68AA171F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trimedx.Healthcare.SyncService", "src\Trimedx.Healthcare.SyncService\Trimedx.Healthcare.SyncService.csproj", "{B0E83C62-51B5-4103-BAF8-AA08C8C02885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trimedx.Healthcare.HelpParserApp", "src\Trimedx.Healthcare.HelpParserApp\Trimedx.Healthcare.HelpParserApp.csproj", "{D7D65BC3-16C3-4FA3-9943-9E282252287E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trimedx.Healthcare.Common", "src\Trimedx.Healthcare.Common\Trimedx.Healthcare.Common.csproj", "{7E6F0E51-3802-4887-997D-59775ACDB4F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trimedx.Healthcare.Web.Common.Client", "src\Trimedx.Healthcare.Web.Common.Client\Trimedx.Healthcare.Web.Common.Client.csproj", "{FE01CB9F-6190-4BC3-B028-08A31A4C8D2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trimedx.Healthcare.IntegrationTests", "tests\Trimedx.Healthcare.IntegrationTests\Trimedx.Healthcare.IntegrationTests.csproj", "{65BDC43D-A2DD-4FE9-B1E2-2D09C75F94D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trimedx.Healthcare.Tests.Database", "tests\Trimedx.Healthcare.Tests.Database\Trimedx.Healthcare.Tests.Database.csproj", "{7E5A8F62-FE50-4175-BCB7-8017B06C006B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C115324F-C495-4698-ADA5-06BAC5BEB15E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C115324F-C495-4698-ADA5-06BAC5BEB15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C115324F-C495-4698-ADA5-06BAC5BEB15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C115324F-C495-4698-ADA5-06BAC5BEB15E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB47F27-CB3A-4E66-A1C2-455D9641DB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB47F27-CB3A-4E66-A1C2-455D9641DB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB47F27-CB3A-4E66-A1C2-455D9641DB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB47F27-CB3A-4E66-A1C2-455D9641DB10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8148CEC-182E-4B7E-9DAB-6A83F82E61F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8148CEC-182E-4B7E-9DAB-6A83F82E61F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8148CEC-182E-4B7E-9DAB-6A83F82E61F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8148CEC-182E-4B7E-9DAB-6A83F82E61F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92883900-BE01-4E96-A5DD-4177BD4D7B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92883900-BE01-4E96-A5DD-4177BD4D7B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92883900-BE01-4E96-A5DD-4177BD4D7B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92883900-BE01-4E96-A5DD-4177BD4D7B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104D5998-C282-418F-87D4-89FE4ADF595C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104D5998-C282-418F-87D4-89FE4ADF595C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B583BA53-E42F-4F51-92A9-7C90C19D8AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B583BA53-E42F-4F51-92A9-7C90C19D8AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B583BA53-E42F-4F51-92A9-7C90C19D8AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B583BA53-E42F-4F51-92A9-7C90C19D8AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A50667-412C-4EFD-A781-6B68AA171F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A50667-412C-4EFD-A781-6B68AA171F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A50667-412C-4EFD-A781-6B68AA171F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A50667-412C-4EFD-A781-6B68AA171F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E83C62-51B5-4103-BAF8-AA08C8C02885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E83C62-51B5-4103-BAF8-AA08C8C02885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E83C62-51B5-4103-BAF8-AA08C8C02885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E83C62-51B5-4103-BAF8-AA08C8C02885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D65BC3-16C3-4FA3-9943-9E282252287E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D65BC3-16C3-4FA3-9943-9E282252287E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D65BC3-16C3-4FA3-9943-9E282252287E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D65BC3-16C3-4FA3-9943-9E282252287E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E6F0E51-3802-4887-997D-59775ACDB4F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E6F0E51-3802-4887-997D-59775ACDB4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E6F0E51-3802-4887-997D-59775ACDB4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E6F0E51-3802-4887-997D-59775ACDB4F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE01CB9F-6190-4BC3-B028-08A31A4C8D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE01CB9F-6190-4BC3-B028-08A31A4C8D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE01CB9F-6190-4BC3-B028-08A31A4C8D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE01CB9F-6190-4BC3-B028-08A31A4C8D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BDC43D-A2DD-4FE9-B1E2-2D09C75F94D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BDC43D-A2DD-4FE9-B1E2-2D09C75F94D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BDC43D-A2DD-4FE9-B1E2-2D09C75F94D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BDC43D-A2DD-4FE9-B1E2-2D09C75F94D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E5A8F62-FE50-4175-BCB7-8017B06C006B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E5A8F62-FE50-4175-BCB7-8017B06C006B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E5A8F62-FE50-4175-BCB7-8017B06C006B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E5A8F62-FE50-4175-BCB7-8017B06C006B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{104D5998-C282-418F-87D4-89FE4ADF595C} = {519A74A0-B64B-4695-B82D-4BDC19C83C62}
+		{65BDC43D-A2DD-4FE9-B1E2-2D09C75F94D5} = {519A74A0-B64B-4695-B82D-4BDC19C83C62}
+		{7E5A8F62-FE50-4175-BCB7-8017B06C006B} = {519A74A0-B64B-4695-B82D-4BDC19C83C62}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5D36F84-0CAA-490C-A777-816ACAA6BADE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+{
+  "name": "tmx_root",
+  "version": "1.0.0",
+  "description": "tmx root package",
+  "scripts": {
+    "install:common": "cd ./src/Trimedx.Healthcare.Web.Common.Client/ClientApp && npm install",
+    "build:common": "cd ./src/Trimedx.Healthcare.Web.Common.Client/ClientApp && npm run build",
+    "install:clientApp": "cd ./src/Trimedx.Healthcare.Web && npm install",
+    "install:adminApp": "cd ./src/Trimedx.Healthcare.Web.Admin && npm install",
+    "install:all": "npm run install:common && npm run build:common && npm run install:clientApp && npm run install:adminApp"
+  }
+}
